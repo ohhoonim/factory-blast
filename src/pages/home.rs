@@ -28,7 +28,6 @@ pub fn Home() -> impl IntoView {
                 </ul>
             }
         }>
-
             <biz-application-shell
                 variant="default"
                 prop:sidebarCollapsed=move || sidebar_collapsed.get()
@@ -51,6 +50,7 @@ pub fn Home() -> impl IntoView {
                             </li>
                         </ul>
                     </nav>
+
                     <button id="sidebarCollapsedButton" on:click=toggle_sidebar>
                         toggle
                     </button>
@@ -58,6 +58,7 @@ pub fn Home() -> impl IntoView {
                 <div>
                     <h1>Main Content Area</h1>
                     <p>This is the main content of the application shell.</p>
+                    <biz-card-container></biz-card-container>
                 </div>
                 <div slot="footer-slot" style="padding: 1rem; text-align: center">
                     Footer Content
